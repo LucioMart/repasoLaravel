@@ -15,9 +15,9 @@
     return view('welcome');
 });*/
 
-Auth::routes();
+//Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');
 
 /* utilizando el sistema de rutas de laravel
 Route::get('/', function(){
@@ -38,11 +38,24 @@ Route::get('contactactame', function() {
     return "Sección de Contactos";
 })->name('contacto');
 
-// Colocandole nombres a la ruta, es una forma de identificar a la misma, y no perder el acceso en caso de que cambie la misma.
+/* Colocandole nombres a la ruta, es una forma de identificar a la misma, y no perder el acceso en caso de que cambie la misma.
 Route::get('/', function(){
     echo "<a href='".route('contacto')."'> Contacto 1</a><br>";
     echo "<a href='".route('contacto')."'> Contacto 2</a><br>";
     echo "<a href='".route('contacto')."'> Contacto 3</a><br>";
     echo "<a href='".route('contacto')."'> Contacto 4</a><br>";
     echo "<a href='".route('contacto')."'> Contacto 5</a><br>";
-});
+});*/
+
+/*Route::get('/{nombre?}', function($nombre = 'Invitado'){
+    return view('home')->with(['nombre'=>$nombre]);
+})->name('home');*/
+
+// simplificar rutas con view
+// Route::view('/home', 'home', ['nombre'=>'Lucio']);
+
+// 
+Route::view('/', 'home')->name('home');
+Route::view('/about', 'about')->name('about');
+Route::view('/porfolio', 'porfolio')->name('porfolio');
+Route::view('/contact', 'contact')->name('contact');
