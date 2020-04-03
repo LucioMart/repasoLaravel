@@ -55,7 +55,14 @@ Route::get('/', function(){
 // Route::view('/home', 'home', ['nombre'=>'Lucio']);
 
 // 
+$portafolios = [
+    'title' => 'proyecto #1',
+    'title' => 'proyecto #2',
+    'title' => 'proyecto #3',
+    'title' => 'proyecto #4'
+];
+
 Route::view('/', 'home')->name('home');
 Route::view('/about', 'about')->name('about');
-Route::view('/porfolio', 'porfolio')->name('porfolio');
+Route::view('/portafolio', 'portafolio', compact('portafolios'))->name('portafolio');
 Route::view('/contact', 'contact')->name('contact');
