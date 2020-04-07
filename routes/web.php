@@ -32,7 +32,7 @@ Route::get('/', function(){
 // pasandoles parametros opcionales a las rutas.
 Route::get('/saludo/{nombre?}', function($nombre = 'Invitado'){
     return "Enviando variables opcionales por las rutas. Bienvenido ".$nombre;
-});
+})->name('saludos');
 
 Route::get('contactactame', function() {
     return "Sección de Contactos";
@@ -55,14 +55,18 @@ Route::get('/', function(){
 // Route::view('/home', 'home', ['nombre'=>'Lucio']);
 
 // 
-$portafolios = [
-    'title' => 'proyecto #1',
-    'title' => 'proyecto #2',
-    'title' => 'proyecto #3',
-    'title' => 'proyecto #4'
-];
 
-Route::view('/', 'home')->name('home');
+/*$portafolio = [
+    ['title' => 'proyecto #1'],
+    ['title' => 'proyecto #2'],
+    ['title' => 'proyecto #3'],
+    ['title' => 'proyecto #4'],
+];*/
+
+/*Route::view('/', 'home')->name('home');
 Route::view('/about', 'about')->name('about');
-Route::view('/portafolio', 'portafolio', compact('portafolios'))->name('portafolio');
-Route::view('/contact', 'contact')->name('contact');
+//Route::view('/portafolio', 'portafolio', compact('portafolio'))->name('portafolio');
+Route::get('/portafolio', 'PortafolioController')->name('portafolio');
+Route::view('/contact', 'contact')->name('contact');*/
+
+Route::resource('porfolio', 'porfolio');

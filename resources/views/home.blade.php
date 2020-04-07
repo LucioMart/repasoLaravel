@@ -6,4 +6,4 @@
 
 @section('tituloCuerpo')
     Home
-@endsection
+@endsection                       

@@ -11,7 +11,7 @@
         <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/about">about</a></li>
-            <li><a href="/porfolio">porfolio</a></li>
+            <li><a href="/portafolio">portafolio</a></li>
             <li><a href="/contact">contact</a></li>
         </ul>
     </nav>

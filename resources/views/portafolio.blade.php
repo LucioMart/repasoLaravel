@@ -1,18 +1,18 @@
 @extends('plantilla')
 
 @section('titulo')
-    Porfolio
+    Portafolio
 @endsection
 
 @section('tituloCuerpo')
-    Porfolio
+    Portafolio
 @endsection
 
 @section('contenido')
 
     <ul>
-        @forelse($portafolios as $portafolio)
-            <li> {{$portafolio('title')}} {{dd($loop)}} </li>
+        @forelse($portafolio as $project)
+            <li> {{$project['title']}} {{ $loop->last ? 'Es el ultimo' : ''}} </li>
         @empty 
                 <p>No hay proyectos</p>
         @endforelse
