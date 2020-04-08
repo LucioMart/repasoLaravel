@@ -5,7 +5,7 @@
 @endsection
 
 @section('tituloCuerpo')
-    Portafolio
+    @lang('Portfolio')
 @endsection
 
 @section('contenido')

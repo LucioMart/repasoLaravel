@@ -5,5 +5,5 @@
 @endsection
 
 @section('tituloCuerpo')
-    About
+    @lang('About')
 @endsection

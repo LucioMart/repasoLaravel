@@ -11,6 +11,8 @@
 |
 */
 
+App::setLocale('es');
+
 /*Route::get('/', function () {
     return view('welcome');
 });*/
@@ -63,10 +65,12 @@ Route::get('/', function(){
     ['title' => 'proyecto #4'],
 ];*/
 
-/*Route::view('/', 'home')->name('home');
+Route::view('/', 'home')->name('home');
 Route::view('/about', 'about')->name('about');
 //Route::view('/portafolio', 'portafolio', compact('portafolio'))->name('portafolio');
 Route::get('/portafolio', 'PortafolioController')->name('portafolio');
-Route::view('/contact', 'contact')->name('contact');*/
+Route::view('/contact', 'contact')->name('contact');
 
-Route::resource('porfolio', 'porfolio');
+Route::post('/contact', 'MessagesController@store');
+
+//Route::resource('porfolio', 'porfolio');
