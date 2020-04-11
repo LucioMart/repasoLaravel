@@ -12,7 +12,7 @@
 
     <ul>
         @forelse($portafolio as $project)
-            <li> {{$project['title']}} {{ $loop->last ? 'Es el ultimo' : ''}} </li>
+            <li> {{$project->title}} {{ $loop->last ? 'Es el ultimo' : ''}} </li>
         @empty 
                 <p>No hay proyectos</p>
         @endforelse

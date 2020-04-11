@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Project;
 
 class PortafolioController extends Controller
 {
@@ -14,12 +15,7 @@ class PortafolioController extends Controller
      */
     public function __invoke(Request $request)
     {
-       $portafolio = [
-            ['title' => 'proyecto #1'],
-            ['title' => 'proyecto #2'],
-            ['title' => 'proyecto #3'],
-            ['title' => 'proyecto #4'],
-        ];
+       $portafolio = Project::latest('description')->get();
 
         return view('portafolio', compact('portafolio'));
     }
